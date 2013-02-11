@@ -3,7 +3,7 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function() {
 		replace: false,
 		restrict: 'A',
 		link: function(scope, element, attr){
-			scope.$watch(attr.Iscroll, function(value){
+			scope.$watch(attr.ngIscroll, function(value){
 				new iScroll(document.querySelector('#wrapper'), {
 					snap: true,
 					momentum: true,

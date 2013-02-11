@@ -3,7 +3,7 @@ ng-iScroller
 
 AngularJS Module that enables iScroll 4.x to work using a directive
 
-[Demo](http://jsfiddle.net/C7k3d/1/)
+[Demo](http://ibspoof.github.com/demos/ng-iscroll/) [Demo - JS Fiddle](http://jsfiddle.net/C7k3d/1/)  
 Note: Recommended to be used with iOS or Andriod device
 
 Dependencies
