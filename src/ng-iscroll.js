@@ -14,7 +14,7 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function() {
 				});
 			}
 			
-			if (attr.ngIscroll !== "" && typeof(attr.ngIscroll)=='number') {
+			if (attr.ngIscroll !== "") {
 				ngScroll_timeout = attr.ngIscroll;
 			}
 			
