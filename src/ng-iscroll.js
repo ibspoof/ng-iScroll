@@ -6,26 +6,22 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function() {
 			
 			var ngScroll_timeout = 5;
 			
-			function isInteger(variable) {
-			    return /^[\d]+$/.test(variable);
-			}
-			
 			function setScroll() {
 				myScroll = new iScroll(document.querySelector('#wrapper'), {
-	   	      	  snap: true,
-	   	      	  momentum: true,
-	   	      	  hScrollbar: false
-	   	    	});
+					nap: true,
+					momentum: true,
+					hScrollbar: false
+				});
 			}
 			
-			if (attr.ngIscroll != "" && isInteger(attr.ngIscroll) ) {
+			if (attr.ngIscroll !== "" && typeof(attr.ngIscroll)=='number') {
 				ngScroll_timeout = attr.ngIscroll;
 			}
 			
             scope.$watch(attr.ngIscroll, function(value){
 				fixSize();
 				setTimeout(setScroll, ngScroll_timeout);
-        	});	
+			});	
 			
 		}
 	};

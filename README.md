@@ -33,6 +33,6 @@ Usage
 Options
 -------------
 
-If you want to delay the iScroll binding due to having animations or using another JS Library to modify the Angular view you can add a timeout value by using ```ng-iscroll='{timeoutValue}'```.  The default timeout is 5
+If you want to delay the iScroll binding due to having animations or using another JS Library to modify the Angular view you can add a timeout value by using ```ng-iscroll='{timeoutValue}'```.  The default timeout is 5ms.
 	
 
