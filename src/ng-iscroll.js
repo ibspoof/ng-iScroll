@@ -7,7 +7,7 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function() {
 			var ngScroll_timeout = 5;
 			
 			function setScroll() {
-				myScroll = new iScroll(document.querySelector('#wrapper'), {
+				myScroll = new iScroll(document.getElementById('wrapper'), {
 					nap: true,
 					momentum: true,
 					hScrollbar: false
@@ -19,7 +19,6 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function() {
 			}
 			
             scope.$watch(attr.ngIscroll, function(value){
-				fixSize();
 				setTimeout(setScroll, ngScroll_timeout);
 			});	
 			
