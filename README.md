@@ -28,6 +28,7 @@ Usage
 
 * Add directive `ng-iscroll` to the ```<div id="wrapper">```
  * Example: ```<div id="wrapper" ng-iscroll>```
+ * Note: the 'id' and 'ng-iscroll' must on the same div element for this directive to work correctly
 	 
 	 
 Options
