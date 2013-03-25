@@ -8,25 +8,27 @@ module.exports = function(grunt) {
 			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n' + '<%= pkg.homepage ? "* " + pkg.homepage + "\n" : "" %>' + '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' + ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
 		},
 		
-		lint: {
-			files: ['grunt.js', 'src/ng-iscroll.js']
+		jshint: {
+			files: ['Gruntfile.js', 'src/ng-iscroll.js']
 		},
 
-		min: {
-			dist: {
-				src: ['src/ng-iscroll.js'],
-				dest: 'src/ng-iscroll.min.js'
-			}
-		},
-
-		uglify: {
+        uglify: {
 			options: {
 				mangle: false
-			}
+			},
+            target: {
+                files: {
+                    'src/ng-iscroll.min.js': ['src/ng-iscroll.js']
+                }
+            }
 		}
 	
 	});
 
+    // load Plugins
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
 	// Register tasks.
-	grunt.registerTask('default', 'lint min');
+	grunt.registerTask('default', ['jshint','uglify']);
 };
