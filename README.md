@@ -24,7 +24,7 @@ Usage
 
 * Include ng-iscroll.js or ng-iscroll.min.js in your html header or existing file before your application main js file
 * Add 'ng-iscroll' to your Angular app's dependencies
- * Example ```var App = angular.module('App', ['ng-scroller']);```
+ * Example ```var App = angular.module('App', ['ng-iscroll']);```
 
 * Add directive `ng-iscroll` to the ```<div id="wrapper">```
  * Example: ```<div id="wrapper" ng-iscroll>```
