@@ -54,5 +54,7 @@ Special Thanks
 Thanks to the following help for submitting bugs and suggesting new features:
 
 [Robert](https://github.com/rtpm)
+
 [Andre Meyering](https://github.com/archer96)
+
 [Brandon Benson](https://github.com/bensane)
