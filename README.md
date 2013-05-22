@@ -3,21 +3,25 @@ ng-iScroller
 
 AngularJS Module that enables iScroll 4.x to work using a directive
 
-[Demo](http://ibspoof.github.com/demos/ng-iscroll/)
+Demo: See demo/ Directory
+
+or
 
 [Demo in JSFiddle](http://jsfiddle.net/C7k3d/1/)
 
-Note: Recommended to be used with iOS or Andriod device
+Note: Recommended to be used with iOS or Android devices only
+
 
 Dependencies
 ------------
 - [AngularJS 1.0.x](http://angularjs.org/)
-- [iScroll 4.x](https://github.com/cubiq/iscroll)
+- [iScroll 4.x](https://github.com/cubiq/iscroll)   Version 4.2.x Recommended
 
 
 Reporting Issues
 -------------
 - Issues can be reported at the Github project.
+
 
 Usage
 ---------
@@ -30,10 +34,25 @@ Usage
  * Example: ```<div id="wrapper" ng-iscroll>```
  * Note: the 'id' and 'ng-iscroll' must on the same div element for this directive to work correctly
 	 
-	 
+
 Options
 -------------
 
-If you want to delay the iScroll binding due to having animations or using another JS Library to modify the Angular view you can add a timeout value by using ```ng-iscroll='{timeoutValue}'```.  The default timeout is 5ms.
-	
+Binding Delay: 
+If you want to delay the iScroll binding due to having animations or using another JS Library to modify the Angular view you can add a timeout value by using the attribute ```ng-iscroll-delay='{delayInMiliseconds}'```.  The default delay is 5ms.
+Note: the old method of setting the delay ```ng-iscroll='{delayInMiliseconds}'``` is still supported.
 
+Forms:
+Forms within an iScroll has certain issues with editing Text values or Select boxes.  To enable support for forms add the following option to the wrapper div: ```ng-iscroll-form='true'``` the default is set to 'false'
+
+See demos/ directory for examples of both
+
+
+Special Thanks
+---------------
+
+Thanks to the following help for submitting bugs and suggesting new features:
+
+[Robert](https://github.com/rtpm)
+[Andre Meyering](https://github.com/archer96)
+[Brandon Benson](https://github.com/bensane)
