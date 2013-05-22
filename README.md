@@ -3,7 +3,10 @@ ng-iScroller
 
 AngularJS Module that enables iScroll 4.x to work using a directive
 
-Demo: See demo/ Directory
+Demos
+------------
+
+See demo/ Directory
 
 or
 
@@ -32,8 +35,9 @@ Usage
 
 * Add directive `ng-iscroll` to the ```<div id="wrapper">```
  * Example: ```<div id="wrapper" ng-iscroll>```
- * Note: the 'id' and 'ng-iscroll' must on the same div element for this directive to work correctly
-	 
+<del> * Note: the 'id' and 'ng-iscroll' must on the same div element for this directive to work correctly</del>
+ * See demo/demo_multiple_iscrolls.htm for how to use multiple iScroll divs on the same page
+
 
 Options
 -------------
@@ -52,6 +56,8 @@ Special Thanks
 ---------------
 
 Thanks to the following help for submitting bugs and suggesting new features:
+
+[Rodrigo Mesquita de Abreu](https://github.com/rodmabreu)
 
 [Robert](https://github.com/rtpm)
 
