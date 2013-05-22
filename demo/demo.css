@@ -53,6 +53,23 @@ body {
 	overflow:auto;
 }
 
+#wrapper2 {
+	position:absolute; z-index:1;
+	top:45px; bottom:48px; left:0;
+	width:50%;
+	background:#555;
+	overflow:auto;
+}
+
+#wrapper3 {
+	position:absolute; z-index:1;
+	top:45px; bottom:48px; left:51%;
+	width:50%;
+	background:#555;
+	overflow:auto;
+}
+
+
 #scroller {
 	position:relative;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
