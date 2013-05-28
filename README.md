@@ -46,24 +46,24 @@ Usage
 
 Options
 -------------
+#### HTML Directive Settings
 
-*HTML Directive Settings*
-
-Binding Delay: 
+**Binding Delay**:
 If you want to delay the iScroll binding due to having animations or using another JS Library to modify the Angular view you can add a timeout value by using the attribute ```ng-iscroll-delay='{delayInMiliseconds}'```.  The default delay is 5ms.
 Note: the old method of setting the delay ```ng-iscroll='{delayInMiliseconds}'``` is still supported.
 
-Forms:
+**Forms**:
 Forms within an iScroll has certain issues with editing Text values or Select boxes.  To enable support for forms add the following option to the wrapper div: ```ng-iscroll-form='true'``` the default is set to 'false'
 
-Naming of Instance:
+**Naming of Instance**:
 When multiple iScrolls are present on a single page and each needs different runtime settings or functions there is a need to identify each instance.  This is done either by setting the 'ng-iscroll="{instanceName}"' or if not set it will default to the id of the div.
+
 *Note:* This breaks version 1.0's usage of the ng-iscroll value to define the delay in dom binding.  Please update your code to use ng-iscroll-delay to change the default delay.
 
 See demos/ directory for examples of both
 
 
-*Angular Controller Settings*
+#### Angular Controller Settings
 
 iScroll exposes both runtime and other functions that can change the appearance or behavior of the iScroll.  These can be set via the AppController to further configure iScroll.
 
