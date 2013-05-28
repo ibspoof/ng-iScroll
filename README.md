@@ -1,4 +1,4 @@
-ng-iScroller
+ng-iScroller v1.1
 ============
 
 AngularJS Module that enables iScroll 4.x to work using a directive
@@ -7,11 +7,6 @@ Demos
 ------------
 
 See demo/ Directory
-
-or
-
-[Demo in JSFiddle](http://jsfiddle.net/C7k3d/1/)
-
 Note: Recommended to be used with iOS or Android devices only
 
 
@@ -26,6 +21,18 @@ Reporting Issues
 - Issues can be reported at the Github project.
 
 
+Features
+-------------
+
+* Option to set time delay on binding of iScroll to dom
+* Support for multiple iScrolls per page
+	* See demo/demo_multiple_iscrolls.htm for how to use multiple iScroll divs on the same page
+* Support for setting iScroll specific options via App Controller (v1.1)
+	* See demo/app.js or demo/app_multi.js for how
+* Support for iScroll 'refresh' and other functions via App Controller (v1.1)
+* iScroll Options can be set via App Controller (v1.1)
+
+
 Usage
 ---------
 
@@ -35,12 +42,12 @@ Usage
 
 * Add directive `ng-iscroll` to the ```<div id="wrapper">```
  * Example: ```<div id="wrapper" ng-iscroll>```
-<del> * Note: the 'id' and 'ng-iscroll' must on the same div element for this directive to work correctly</del>
- * See demo/demo_multiple_iscrolls.htm for how to use multiple iScroll divs on the same page
 
 
 Options
 -------------
+
+*HTML Directive Settings*
 
 Binding Delay: 
 If you want to delay the iScroll binding due to having animations or using another JS Library to modify the Angular view you can add a timeout value by using the attribute ```ng-iscroll-delay='{delayInMiliseconds}'```.  The default delay is 5ms.
@@ -49,7 +56,44 @@ Note: the old method of setting the delay ```ng-iscroll='{delayInMiliseconds}'``
 Forms:
 Forms within an iScroll has certain issues with editing Text values or Select boxes.  To enable support for forms add the following option to the wrapper div: ```ng-iscroll-form='true'``` the default is set to 'false'
 
+Naming of Instance:
+When multiple iScrolls are present on a single page and each needs different runtime settings or functions there is a need to identify each instance.  This is done either by setting the 'ng-iscroll="{instanceName}"' or if not set it will default to the id of the div.
+
 See demos/ directory for examples of both
+
+
+*Angular Controller Settings*
+
+iScroll exposes both runtime and other functions that can change the appearance or behavior of the iScroll.  These can be set via the AppController to further configure iScroll.
+
+Example:
+
+HTML:
+```<div id="wrapper" ng-iscroll='wrapper' ng-iscroll-delay='50'>
+	<button ng-click="refreshiScroll()">Refresh</button>
+	</div>
+```
+
+AppController:
+```javascript
+	$scope.$parent.myScrollOptions = {
+		'wrapper': {
+			snap: false,
+			onScrollEnd: function ()
+			{
+				alert('finshed scrolling wrapper');
+		}},
+	};
+
+	$scope.refreshiScroll = function ()
+	{
+		$scope.$parent.myScroll['wrapper'].refresh();
+		alert('wrapper refreshed');
+	};
+```
+
+For more examples see the demo directory.
+
 
 
 Special Thanks
