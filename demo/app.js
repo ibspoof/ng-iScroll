@@ -8,10 +8,11 @@ App.controller('Controller', function ($scope)
         snap: false,
         onScrollEnd: function ()
         {
-            alert('finshed scrolling wrapper3');
+            alert('finshed scrolling');
         }
     };
 
+    // expose refreshiScroll() function for ng-onclick or other meth
     $scope.refreshiScroll = function ()
     {
         $scope.$parent.myScroll['wrapper'].refresh();

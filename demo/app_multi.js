@@ -3,7 +3,7 @@ var App = angular.module('App', ['ng-iscroll']);
 App.controller('Controller', function ($scope)
 {
     $scope.$parent.myScrollOptions = {
-        'wrapper2': {
+        'testWrap2': {
             snap: false,
             onScrollEnd: function ()
             {
@@ -27,7 +27,7 @@ App.controller('Controller', function ($scope)
 
     $scope.refreshiScroll2 = function ()
     {
-        $scope.$parent.myScroll['wrapper2'].refresh();
-        alert('wrapper2 refreshed');
+        $scope.$parent.myScroll['testWrap2'].refresh();
+        alert('testWrap2 refreshed');
     };
 });
