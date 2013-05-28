@@ -70,7 +70,7 @@ body {
 }
 
 
-#scroller {
+#scroller, .scroller {
 	position:relative;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	float:left;
@@ -78,7 +78,7 @@ body {
 	padding:0;
 }
 
-#scroller ul {
+#scroller ul, .scroller ul {
 	position:relative;
 	list-style:none;
 	padding:0;
@@ -87,7 +87,7 @@ body {
 	text-align:left;
 }
 
-#scroller li {
+#scroller li, .scroller li {
 	padding:0 10px;
 	height:40px;
 	line-height:40px;
@@ -97,6 +97,6 @@ body {
 	font-size:14px;
 }
 
-#scroller li > a {
+#scroller li > a, .scroller li > a {
 	display:block;
 }
