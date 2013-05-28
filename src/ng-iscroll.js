@@ -55,7 +55,7 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
                     scope.$parent.myScroll = [];
                 }
 
-                scope.$parent.myScroll[scroll_key] = (new iScroll(element[0], ngiScroll_opts));
+                scope.$parent.myScroll[scroll_key] = new iScroll(element[0], ngiScroll_opts);
             }
 
             // new specific setting for setting timeout using: ng-iscroll-timeout='{val}'
