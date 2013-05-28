@@ -70,31 +70,31 @@ iScroll exposes both runtime and other functions that can change the appearance 
 Example:
 
 HTML:
-```<div id="wrapper" ng-iscroll='wrapper' ng-iscroll-delay='50'>
+```
+<div id="wrapper" ng-iscroll='wrapper' ng-iscroll-delay='50'>
 	<button ng-click="refreshiScroll()">Refresh</button>
-	</div>
+</div>
 ```
 
 AppController:
-```javascript
-	$scope.$parent.myScrollOptions = {
-		'wrapper': {
-			snap: false,
-			onScrollEnd: function ()
-			{
-				alert('finshed scrolling wrapper');
-		}},
-	};
+```
+$scope.$parent.myScrollOptions = {
+	'wrapper': {
+		snap: false,
+		onScrollEnd: function ()
+		{
+			alert('finshed scrolling wrapper');
+	}},
+};
 
-	$scope.refreshiScroll = function ()
-	{
-		$scope.$parent.myScroll['wrapper'].refresh();
-		alert('wrapper refreshed');
-	};
+$scope.refreshiScroll = function ()
+{
+	$scope.$parent.myScroll['wrapper'].refresh();
+	alert('wrapper refreshed');
+};
 ```
 
 For more examples see the demo directory.
-
 
 
 Special Thanks
