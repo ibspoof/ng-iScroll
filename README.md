@@ -58,6 +58,7 @@ Forms within an iScroll has certain issues with editing Text values or Select bo
 
 Naming of Instance:
 When multiple iScrolls are present on a single page and each needs different runtime settings or functions there is a need to identify each instance.  This is done either by setting the 'ng-iscroll="{instanceName}"' or if not set it will default to the id of the div.
+*Note:* This breaks version 1.0's usage of the ng-iscroll value to define the delay in dom binding.  Please update your code to use ng-iscroll-delay to change the default delay.
 
 See demos/ directory for examples of both
 
