@@ -97,6 +97,12 @@ $scope.refreshiScroll = function ()
 For more examples see the demo directory.
 
 
+License
+--------------
+
+ng-IScroll is released under the [MIT License](http://opensource.org/licenses/MIT).
+
+
 Special Thanks
 ---------------
 
