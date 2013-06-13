@@ -54,7 +54,6 @@ Options
 
 **Binding Delay**:
 If you want to delay the iScroll binding due to having animations or using another JS Library to modify the Angular view you can add a timeout value by using the attribute ```ng-iscroll-delay='{delayInMiliseconds}'```.  The default delay is 5ms.
-Note: the old method of setting the delay ```ng-iscroll='{delayInMiliseconds}'``` is still supported.
 
 **Forms**:
 Forms within an iScroll has certain issues with editing Text values or Select boxes.  To enable support for forms add the following option to the wrapper div: ```ng-iscroll-form='true'``` the default is set to 'false'
@@ -97,6 +96,14 @@ $scope.refreshiScroll = function ()
 	alert('wrapper refreshed');
 };
 ```
+
+The default settings for iScroll are the following:
+- snap: true
+- momentum: true
+- hScrollbar: false
+- mouseWheel: true
+
+The above can be overridden using the $scope.$parent.myScrollOptions option in your Controller.
 
 For more examples see the demo directory.
 
