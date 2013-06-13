@@ -97,7 +97,7 @@ $scope.refreshiScroll = function ()
 };
 ```
 
-The default settings for iScroll are the following:
+The default settings for ng-iScroll are the following:
 - snap: true
 - momentum: true
 - hScrollbar: false
