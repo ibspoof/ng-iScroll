@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="./demo.css">
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.6/angular.js'></script>
+           <script type='text/javascript' src='http://rawgithub.com/cubiq/iscroll/master/dist/iscroll-min.js'></script>
+    <script type="text/javascript" src="../src/ng-iscroll.js"></script>
+    <script type="text/javascript" src="./app_multi.js"></script>
+</head>
+
+<div id="header"><a href="http://cubiq.org/iscroll">iScroller Test Multiple Instances</a></div>
+<div ng-app='App'>
+    <div ng-controller='Controller'>
+
+        <div id="wrapper2" ng-iscroll="testWrap2" ng-iscroll-delay='50'>
+            <div class="scroller">
+                <ul class="thelist">
+                    <li>Pretty row 1</li>
+                    <li id="aaa">Pretty row 2</li>
+                    <li>Pretty row 3
+                        <button ng-click="refreshiScroll2()">Refresh</button>
+                    </li>
+                    <li>Pretty row 4</li>
+                    <li>Pretty row 5</li>
+                    <li>Pretty row 6</li>
+                    <li>Pretty row 7</li>
+                    <li>Pretty row 8</li>
+                    <li>Pretty row 9</li>
+                    <li>Pretty row 10</li>
+                    <li>Pretty row 11</li>
+                    <li>Pretty row 12</li>
+                    <li>Pretty row 13</li>
+                    <li>Pretty row 14</li>
+                    <li>Pretty row 15</li>
+                    <li>Pretty row 16</li>
+                    <li>Pretty row 17</li>
+                    <li>Pretty row 18</li>
+                    <li>Pretty row 19</li>
+                    <li>Pretty row 20</li>
+                    <li>Pretty row 21</li>
+                    <li>Pretty row 22</li>
+                    <li>Pretty row 23</li>
+                    <li>Pretty row 24</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="wrapper3" ng-iscroll ng-iscroll-delay='25'>
+            <div class="scroller">
+                <ul class="thelist">
+                    <li>Pretty row 1</li>
+                    <li id="aaa">Pretty row 2</li>
+                    <li>Pretty row 3</li>
+                    <li>Pretty row 4
+                        <button ng-click="refreshiScroll3()">Refresh</button>
+                    </li>
+                    <li>Pretty row 5</li>
+                    <li>Pretty row 6</li>
+                    <li>Pretty row 7</li>
+                    <li>Pretty row 8</li>
+                    <li>Pretty row 9</li>
+                    <li>Pretty row 10</li>
+                    <li>Pretty row 11</li>
+                    <li>Pretty row 12</li>
+                    <li>Pretty row 13</li>
+                    <li>Pretty row 14</li>
+                    <li>Pretty row 15</li>
+                    <li>Pretty row 16</li>
+                    <li>Pretty row 17</li>
+                    <li>Pretty row 18</li>
+                    <li>Pretty row 19</li>
+                    <li>Pretty row 20</li>
+                    <li>Pretty row 21</li>
+                    <li>Pretty row 22</li>
+                    <li>Pretty row 23</li>
+                    <li>Pretty row 24</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>

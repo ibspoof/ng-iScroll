@@ -1,0 +1,10 @@
+{
+  "name": "ng-iScroll",
+  "version": "0.1.2",
+  "main": "src/ng-iscroll.js",
+  "ignore": [
+    "./demo/*.css",
+    "./demo/*.htm",
+    "./demo/*.js"
+  ]
+}
