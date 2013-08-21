@@ -93,6 +93,13 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
                 setTimeout(setScroll, ngiScroll_timeout);
             });
 
+			// add ng-iscroll-refresher for watching dynamic content inside iscroll
+			if(attr.ngIscrollRefresher !== undefined) {
+				scope.$watch(attr.ngIscrollRefresher, function ()
+				{
+					if(scope.$parent.myScroll[scroll_key] !== undefined) scope.$parent.myScroll[scroll_key].refresh();
+				});
+			}
         }
     };
 });
