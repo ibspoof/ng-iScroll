@@ -81,10 +81,12 @@ AppController:
 $scope.$parent.myScrollOptions = {
 	'wrapper': {
 		snap: false,
-		onScrollEnd: function ()
-		{
-			alert('finshed scrolling wrapper');
-	}},
+		on: [
+			{ scrollEnd: function (e) {
+				alert('finished scrolling wrapper');
+			}},
+		],
+	}
 };
 
 $scope.refreshiScroll = function ()
