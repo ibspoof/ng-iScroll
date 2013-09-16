@@ -58,7 +58,7 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
 
                     if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
                         e.preventDefault();
-                } };
+                } });
             }
 
             if (scope.$parent.myScrollOptions) {
@@ -86,7 +86,7 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
                     for (var key in ngiScroll_opts.on[i]) {
                         scope.$parent.myScroll[scroll_key].on(key.toString(), ngiScroll_opts.on[i][key]);
                     }
-                };
+                }
             }
 
             // new specific setting for setting timeout using: ng-iscroll-timeout='{val}'
