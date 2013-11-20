@@ -16,6 +16,11 @@ Dependencies
 - [iScroll 4.x](https://github.com/cubiq/iscroll)   Version 4.2.x Recommended
 
 
+Installation
+------------
+ - **Bower**:
+ Install the package by adding `ng-iScroll` to your `bower.json` file.
+
 Reporting Issues
 -------------
 - Issues can be reported at the Github project.
