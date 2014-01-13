@@ -1,7 +1,7 @@
-ng-iScroller v1.1
+ng-iScroller v1.2
 ============
 
-AngularJS Module that enables iScroll 4.x to work using a directive.  If you are looking for a iScroll 5 compatible version please checkout the [ng-iScoll 1.2b branch](https://github.com/ibspoof/ng-iScroll/tree/v1.2b) 
+AngularJS Module that enables iScroll 5 to work using a directive.
 
 Demos
 ------------
@@ -13,7 +13,7 @@ Note: Recommended to be used with iOS or Android devices only
 Dependencies
 ------------
 - [AngularJS 1.0.x](http://angularjs.org/)
-- [iScroll 4.x](https://github.com/cubiq/iscroll)   Version 4.2.x Recommended
+- [iScroll 5.x](https://github.com/cubiq/iscroll)
 
 
 Reporting Issues
@@ -52,9 +52,6 @@ Options
 If you want to delay the iScroll binding due to having animations or using another JS Library to modify the Angular view you can add a timeout value by using the attribute ```ng-iscroll-delay='{delayInMiliseconds}'```.  The default delay is 5ms.
 Note: the old method of setting the delay ```ng-iscroll='{delayInMiliseconds}'``` is still supported.
 
-**Forms**:
-Forms within an iScroll has certain issues with editing Text values or Select boxes.  To enable support for forms add the following option to the wrapper div: ```ng-iscroll-form='true'``` the default is set to 'false'
-
 **Naming of Instance**:
 When multiple iScrolls are present on a single page and each needs different runtime settings or functions there is a need to identify each instance.  This is done either by setting the 'ng-iscroll="{instanceName}"' or if not set it will default to the id of the div.
 
@@ -79,16 +76,38 @@ HTML:
 AppController:
 ```
 $scope.$parent.myScrollOptions = {
-	'wrapper': {
-		snap: false,
-		on: [
-			{ scrollEnd: function (e) {
-				alert('finished scrolling wrapper');
-			}},
-		],
-	}
-};
+    'list_wrapper': {
+        snap: false,
+        scrollbars: 'custom',
+        fadeScrollbars: true,
+        probeType: 2,
+        interactiveScrollbars: true,
+        on: [
+            { beforeScrollStart: function () {
+                if (this.y === 0) {
+                    $scope.yStartFromZero = true;
+                }
 
+            }},
+            { scrollEnd: function () {
+                if ($scope.yStartFromZero && this.directionY === -1) {
+                    this._execEvent("pullToRefresh");
+                }
+                $scope.yStartFromZero = false;
+                $scope.infiniteScroll = false;
+            }},
+            { pullToRefresh: function () {
+                console.log('Pull to Refresh!');
+            }},
+            { scroll: function () {
+                if (!$scope.infiniteScroll && !search.loading && !search.endlist && (this.y <= this.maxScrollY + 800)) {
+                    $scope.infiniteScroll = true;
+                    search.__search();
+                }
+            }}
+        ]
+    }
+};
 $scope.refreshiScroll = function ()
 {
 	$scope.$parent.myScroll['wrapper'].refresh();
@@ -117,3 +136,5 @@ Thanks to the following help for submitting bugs and suggesting new features:
 [Andre Meyering](https://github.com/archer96)
 
 [Brandon Benson](https://github.com/bensane)
+
+[João Ribeiro](https://github.com/JonnyBGod)
