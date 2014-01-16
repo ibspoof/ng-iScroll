@@ -22,7 +22,7 @@ THE SOFTWARE.
 */
 
 
-angular.module('ng-iscroll', []).directive('ngIscroll', function ($timeout)
+angular.module('ng-iscroll', []).directive('ngIscroll', ['$timeout', function ($timeout)
 {
     return {
         replace: false,
@@ -92,4 +92,4 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ($timeout)
 
         }
     };
-});
+}]);
