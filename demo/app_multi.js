@@ -5,16 +5,20 @@ App.controller('Controller', function ($scope)
     $scope.$parent.myScrollOptions = {
         'testWrap2': {
             snap: false,
-            onScrollEnd: function ()
-            {
-                alert('finshed scrolling wrapper2');
-            }},
+            on: [
+                { scrollEnd: function (e) {
+                    alert('finished scrolling wrapper');
+                }},
+            ]
+        },
         'wrapper3': {
             snap: false,
-            onScrollEnd: function ()
-            {
-                alert('finshed scrolling wrapper3');
-            }}
+            on: [
+                { scrollEnd: function (e) {
+                    alert('finished scrolling wrapper');
+                }},
+            ]
+        }
     };
 
 

@@ -6,10 +6,11 @@ App.controller('Controller', function ($scope)
     // exposed by iScroll can be defined per id attribute
     $scope.$parent.myScrollOptions = {
         snap: false,
-        onScrollEnd: function ()
-        {
-            alert('finshed scrolling');
-        }
+        on: [
+            { scrollEnd: function (e) {
+                alert('finished scrolling wrapper');
+            }},
+        ]
     };
 
     // expose refreshiScroll() function for ng-onclick or other meth
