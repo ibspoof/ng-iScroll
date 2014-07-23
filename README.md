@@ -1,7 +1,7 @@
 ng-iScroller v1.1
 ============
 
-AngularJS Module that enables iScroll 4.x to work using a directive.  If you are looking for a iScroll 5 compatible version please checkout the [ng-iScoll 1.2b branch](https://github.com/ibspoof/ng-iScroll/tree/v1.2b) 
+AngularJS Module that enables iScroll 5.x to work using a directive.  If you are looking for a iScroll 5 compatible version please checkout the [ng-iScoll 1.2b branch](https://github.com/ibspoof/ng-iScroll/tree/v1.2b) 
 
 Demos
 ------------
@@ -13,7 +13,7 @@ Note: Recommended to be used with iOS or Android devices only
 Dependencies
 ------------
 - [AngularJS 1.0.x](http://angularjs.org/)
-- [iScroll 4.x](https://github.com/cubiq/iscroll)   Version 4.2.x Recommended
+- [iScroll 5.x](https://github.com/cubiq/iscroll)   Version 5.x Recommended
 
 
 Reporting Issues
