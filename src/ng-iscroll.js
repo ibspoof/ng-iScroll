@@ -93,13 +93,19 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
                 setTimeout(setScroll, ngiScroll_timeout);
             });
 
-			// add ng-iscroll-refresher for watching dynamic content inside iscroll
-			if(attr.ngIscrollRefresher !== undefined) {
-				scope.$watch(attr.ngIscrollRefresher, function ()
-				{
-					if(scope.$parent.myScroll[scroll_key] !== undefined) scope.$parent.myScroll[scroll_key].refresh();
-				});
-			}
+		// add ng-iscroll-refresher for watching dynamic content inside iscroll
+		if(attr.ngIscrollRefresher !== undefined) {
+			scope.$watch(attr.ngIscrollRefresher, function ()
+			{
+				if(scope.$parent.myScroll[scroll_key] !== undefined) scope.$parent.myScroll[scroll_key].refresh();
+			});
+		}
+		
+		// destroy the iscroll instance if we are moving away from a state to another
+		// the DOM has changed and he only instance is not necessary any more
+		scope.$on('$destroy', function () {
+			scope.$parent.myScroll[scroll_key].destory();	
+		});
         }
     };
 });
