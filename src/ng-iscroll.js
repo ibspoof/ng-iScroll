@@ -32,13 +32,14 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
             // default timeout
             var ngiScroll_timeout = 5;
 
-
             // default options
             var ngiScroll_opts = {
                 snap: true,
                 momentum: true,
                 hScrollbar: false,
-                mouseWheel: true
+                mouseWheel: true,
+                click: true,
+                tap: true
             };
 
             // scroll key /id
@@ -48,18 +49,18 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
                 scroll_key = attr.id;
             }
 
-            // if ng-iscroll-form='true' then the additional settings will be supported
-            if (attr.ngIscrollForm !== undefined && attr.ngIscrollForm == 'true') {
-                ngiScroll_opts.useTransform = false;
-                ngiScroll_opts.onBeforeScrollStart = function (e)
-                {
-                    var target = e.target;
-                    while (target.nodeType != 1) target = target.parentNode;
-
-                    if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
-                        e.preventDefault();
-                };
-            }
+            // // if ng-iscroll-form='true' then the additional settings will be supported
+            // if (attr.ngIscrollForm !== undefined && attr.ngIscrollForm == 'true') {
+            //     ngiScroll_opts.useTransform = false;
+            //     ngiScroll_opts.onBeforeScrollStart = function (e)
+            //     {
+            //         var target = e.target;
+            //         while (target.nodeType != 1) target = target.parentNode;
+            //
+            //         if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+            //             e.preventDefault();
+            //     };
+            // }
 
             if (scope.$parent.myScrollOptions) {
                 for (var i in scope.$parent.myScrollOptions) {
