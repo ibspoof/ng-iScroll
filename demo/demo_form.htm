@@ -11,14 +11,21 @@
 <div id="header"><a href="http://cubiq.org/iscroll">iScroller Test</a></div>
 <div ng-app='App'>
   <div ng-controller='Controller'>
-    <div id="wrapper" ng-iscroll ng-iscroll-delay="2050" ng-iscroll-form="true">
+    <!-- <div id="wrapper" ng-iscroll ng-iscroll-delay="2050" ng-iscroll-form="true"> -->
+      <div id="wrapper" ng-iscroll ng-iscroll-delay="2050">
       <div id="scroller">
         <ul id="thelist">
           <li><input type="text"></li>
           <li>Pretty row 2</li>
-          <li><input type="radio"></li>
+          <li>
+            <input name="radioTest" type="radio"> True
+            <input name="radioTest" type="radio"> False
+          </li>
           <li>Pretty row 4</li>
-          <li><input type="checkbox"></li>
+          <li>
+            <input name="test" value="1" type="checkbox">Meteors
+            <input name="test2" value="0" type="checkbox">Asteriods
+          </li>
           <li>Pretty row 6</li>
           <li><select><option>opt</option></select></li>
           <li>Pretty row 8</li>

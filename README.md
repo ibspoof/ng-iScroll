@@ -1,4 +1,4 @@
-ng-iScroller v1.2b
+ng-iScroller v1.3
 ============
 
 AngularJS Module that enables iScroll 5.x to work using a directive
@@ -12,18 +12,12 @@ Note: Recommended to be used with iOS or Android devices only
 
 Dependencies
 ------------
-- [AngularJS 1.0.x](http://angularjs.org/)
-- [iScroll 5.x](https://github.com/cubiq/iscroll) 
-
-Special Notes
-------------
-This is a temp release to make ng-iScroll compatible with iScoll 5.0 Beta
-
+- [AngularJS 1.2+](http://angularjs.org/) (Tested with AngularJs 1.3 & 1.4)
+- [iScroll 5.1.x](https://github.com/cubiq/iscroll)
 
 Reporting Issues
 -------------
 - Issues can be reported at the Github project.
-
 
 Features
 -------------
@@ -31,10 +25,10 @@ Features
 * Option to set time delay on binding of iScroll to dom
 * Support for multiple iScrolls per page
 	* See demo/demo_multiple_iscrolls.htm for how to use multiple iScroll divs on the same page
-* Support for setting iScroll specific options via App Controller (v1.1)
+* Support for setting iScroll specific options via App Controller
 	* See demo/app.js or demo/app_multi.js for how
-* Support for iScroll 'refresh' and other functions via App Controller (v1.1)
-* iScroll Options can be set via App Controller (v1.1)
+* Support for iScroll 'refresh' and other functions via App Controller
+* iScroll Options can be set via App Controller
 
 
 Usage
