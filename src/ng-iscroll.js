@@ -21,7 +21,6 @@ THE SOFTWARE.
 
 */
 
-
 angular.module('ng-iscroll', []).directive('ngIscroll', function ()
 {
   return {
@@ -48,23 +47,6 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
       if (scroll_key === '') {
         scroll_key = attr.id;
       }
-
-      // // if ng-iscroll-form='true' then the additional settings will be supported
-      // if (attr.ngIscrollForm !== undefined && attr.ngIscrollForm == 'true') {
-      //
-      //     //ngiScroll_opts.useTransform = false;
-      //     ngiScroll_opts.onBeforeScrollStart = function (e)
-      //     {
-      //         console.log(e);
-      //         var target = e.target;
-      //         //while (target.nodeType != 1) target = target.parentNode;
-      //
-      //         console.log(target.tagName);
-      //
-      //         if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
-      //             e.preventDefault();
-      //     };
-      // }
 
       if (scope.$parent.myScrollOptions) {
         for (var i in scope.$parent.myScrollOptions) {
