@@ -18,7 +18,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
+1.2
 */
 
 
@@ -61,15 +61,17 @@ angular.module('ng-iscroll', []).directive('ngIscroll', function ()
                 };
             }
 
+	    /*  Updated below code to allow multiple scrolls within same controller.
+	    */
             if (scope.$parent.myScrollOptions) {
                 for (var i in scope.$parent.myScrollOptions) {
-                    if (i === scroll_key) {
+		    if(typeof(scope.$parent.myScrollOptions[i])!=="object"){
+			ngiScroll_opts[i] = scope.$parent.myScrollOptions[i];
+		   } else if (i === scroll_key) {
                         for (var k in scope.$parent.myScrollOptions[i]) {
                             ngiScroll_opts[k] = scope.$parent.myScrollOptions[i][k];
                         }
-                    } else {
-                        ngiScroll_opts[i] = scope.$root.myScrollOptions[i];
-                    }
+                  }
                 }
             }
 
